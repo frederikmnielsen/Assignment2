@@ -38,4 +38,5 @@ jobs:
         run: dotnet build --configuration Release --no-restore
         
       - name: Test
+        working-directory: ../../../Assignment2
         run: dotnet test --no-restore --verbosity normal
