@@ -34,5 +34,37 @@ namespace Assignment2.Tests
 
 
         }
+
+        [Fact]
+        public void ImmutableStudent_equal()
+        {
+            //Arrange
+            ImmutableStudent Jens1 = new ImmutableStudent(1, "Jens", "Jensen", Status.New);
+            ImmutableStudent Jens2 = new ImmutableStudent(1, "Jens", "Jensen", Status.New);
+            
+            //Act
+            var output = Jens1 == Jens2;
+
+            //Assert
+            Assert.True(output);
+
+
+        }
+
+        [Fact]
+        public void ImmutableStudent_toString()
+        {
+            //Arrange
+            ImmutableStudent Jens1 = new ImmutableStudent(1, "Jens", "Jensen", Status.New);
+            var expected = "ImmutableStudent { GivenName = Jens, status = New }";
+            
+            //Act
+            var output = Jens1.ToString();
+
+            //Assert
+            Assert.Equal(expected,output);
+
+
+        }
     }
 }
