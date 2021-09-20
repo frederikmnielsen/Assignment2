@@ -35,6 +35,7 @@ jobs:
         run: dotnet restore
         
       - name: Build 
+        working-directory: ../../../Assignment2
         run: dotnet build --configuration Release --no-restore
         
       - name: Test
