@@ -32,6 +32,7 @@ jobs:
           dotnet-version: 5.0.x
           
       - name: Install Dependencies 
+        working-directory: ../../Assignment2
         run: dotnet restore
         
       - name: Build 
