@@ -33,7 +33,7 @@ jobs:
           
       - name: Install Dependencies 
         working-directory: ../../Assignment2
-        run: dotnet restore
+        run: echo ls
         
       - name: Build 
         working-directory: ../../Assignment2
