@@ -32,13 +32,13 @@ jobs:
           dotnet-version: 5.0.x
           
       - name: Install Dependencies 
-        working-directory: ../../Assignment2
-        run: echo ls
+        working-directory: ./Assignment2
+        run: dotnet restore
         
       - name: Build 
-        working-directory: ../../Assignment2
+        working-directory: ./Assignment2
         run: dotnet build --configuration Release --no-restore
         
       - name: Test
-        working-directory: ../../Assignment2
+        working-directory: ./Assignment2
         run: dotnet test --no-restore --verbosity normal
